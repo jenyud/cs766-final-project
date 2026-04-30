@@ -1,8 +1,6 @@
 # Multi-Future Pedestrian Trajectory Forecasting with Intent–Trajectory Consistency
 
 [![Course](https://img.shields.io/badge/Course-CS766%20Computer%20Vision-blue)](#)
-[![Project](https://img.shields.io/badge/Project-Final%20Project-green)](#)
-[![Status](https://img.shields.io/badge/Status-Prototype-orange)](#)
 
 **Authors:** Guyang Cao, Yujie Ding  
 **Institution:** University of Wisconsin–Madison  
