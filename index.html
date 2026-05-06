@@ -467,12 +467,11 @@
       </div>
     </section>
 
-
     <!-- Qualitative Results -->
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <h2 class="title is-3">Qualitative Results</h2>
-
+    
         <div class="content has-text-justified">
           <p>
             We visualize predicted future sets in three types of examples: a success case, an ambiguous case, and a failure case.
@@ -480,43 +479,40 @@
             However, without mixture weights or an intention head, the model does not yet tell us which future should be trusted most.
           </p>
         </div>
-
+    
         <div class="has-text-centered">
-          <img src="static/images/qualitative_results.png"
-               alt="Qualitative results showing success, ambiguous, and failure cases"
-               style="max-width: 95%; border-radius: 8px;">
+    
+          <figure class="mb-6">
+            <img src="static/images/final_success_best_minADE_idx_1314.png"
+                 alt="Success case: best minADE qualitative result"
+                 style="max-width: 95%; border-radius: 8px;">
+            <p class="subtitle is-6 mt-2">
+              Success case: best minADE example.
+            </p>
+          </figure>
+    
+          <figure class="mb-6">
+            <img src="static/images/final_ambiguous_high_spread_idx_1599.png"
+                 alt="Ambiguous case: high spread qualitative result"
+                 style="max-width: 95%; border-radius: 8px;">
+            <p class="subtitle is-6 mt-2">
+              Ambiguous case: high-spread predicted future set.
+            </p>
+          </figure>
+    
+          <figure class="mb-6">
+            <img src="static/images/final_failure_worst_minADE_idx_1590.png"
+                 alt="Failure case: worst minADE qualitative result"
+                 style="max-width: 95%; border-radius: 8px;">
+            <p class="subtitle is-6 mt-2">
+              Failure case: worst minADE example.
+            </p>
+          </figure>
+    
           <p class="subtitle is-6">
             Qualitative examples of predicted future trajectory sets.
           </p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Discussion -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3">Discussion and Problems Encountered</h2>
-
-        <div class="content has-text-justified">
-          <h3 class="title is-4">What Worked</h3>
-          <p>
-            A simple GRU-based model can generate multiple plausible future trajectories.
-            Best-of-K training is effective for improving minADE and minFDE.
-            This suggests that multi-future prediction is better suited than deterministic regression for one-to-many pedestrian motion.
-          </p>
-
-          <h3 class="title is-4">What Did Not Fully Work</h3>
-          <p>
-            The first or default trajectory may become worse even when minADE improves.
-            This means that set-based evaluation and single-mode evaluation measure different aspects of performance.
-            The current model also does not learn probability rankings over the K predicted futures.
-          </p>
-
-          <p>
-            Another limitation is that our final prototype does not yet include image context, road geometry, or ego-vehicle speed.
-            Therefore, the current results mainly show the effect of multi-future trajectory prediction using center-point motion only.
-          </p>
+    
         </div>
       </div>
     </section>
